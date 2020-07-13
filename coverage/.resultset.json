@@ -25,7 +25,8 @@
           1,
           1,
           1,
-          4,
+          1,
+          null,
           null,
           null,
           null
@@ -33,14 +34,14 @@
       },
       "/Users/sophie/MakersProjects/week10/bank_tech_test/lib/account.rb": {
         "lines": [
-          1,
           null,
+          1,
           1,
           3,
           null,
           null,
           1,
-          5,
+          3,
           null,
           null,
           1,
@@ -48,12 +49,12 @@
           null,
           null,
           1,
-          1,
+          0,
           null,
           null
         ]
       }
     },
-    "timestamp": 1594645004
+    "timestamp": 1594646654
   }
 }

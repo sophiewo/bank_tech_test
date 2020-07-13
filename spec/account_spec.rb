@@ -20,7 +20,7 @@ describe Account do
     it 'amount to be withdrawn from user account' do
       subject.deposit(100)
       amount = 50
-      expect { subject.withdraw(amount) }. to change { subject.account_balance }.by - amount
+      expect { subject.withdraw(amount) }. to change { subject.account_balance }.by(- amount)
     end
   end
 end
