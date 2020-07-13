@@ -22,5 +22,9 @@ describe Account do
       amount = 50
       expect { subject.withdraw(amount) }. to change { subject.account_balance }.by(- amount)
     end
+
+    it 'raises error if not enough funds are available' do
+      expect { subject.withdraw(500) }.to raise_error "Insufficient funds" 
+    end
   end
 end
