@@ -32,6 +32,12 @@
           2,
           null,
           null,
+          null,
+          1,
+          1,
+          1,
+          null,
+          null,
           null
         ]
       },
@@ -40,7 +46,9 @@
           null,
           1,
           1,
-          4,
+          5,
+          null,
+          5,
           null,
           null,
           1,
@@ -48,20 +56,42 @@
           null,
           null,
           1,
-          2,
-          null,
-          null,
-          1,
           null,
           2,
           null,
+          2,
+          null,
+          null,
+          null,
           1,
+          2,
+          null,
+          1,
+          null,
+          1,
+          null,
+          null,
+          null,
+          1,
+          4,
+          null,
+          null,
+          null,
+          1,
+          0,
+          null,
+          null,
           null,
           null,
           null
         ]
+      },
+      "/Users/sophie/MakersProjects/week10/bank_tech_test/spec/statement_spec.rb": {
+        "lines": [
+
+        ]
       }
     },
-    "timestamp": 1594648183
+    "timestamp": 1594656698
   }
 }

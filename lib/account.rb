@@ -14,7 +14,7 @@ class Account
 
     @balance += amount
     
-    @statement << { :date => date, :credit => amount, :account_balance => @balance }
+    @statement << { :date => date, :credit => amount, :debit => "       ", :account_balance => @balance }
 
   end
 
@@ -23,12 +23,20 @@ class Account
 
     @balance -= amount
 
-    @statement << { :date => date, :debit => amount, :account_balance => @balance }
+    @statement << { :date => date, :credit => "        ", :debit => amount, :account_balance => @balance }
 
   end 
 
   def date
     Time.new.strftime("%d/%m/%Y")
+  end
+
+
+  def print
+     puts "date       || credit || debit || balance"
+      @statement.each do |hash|
+    puts "#{hash[:date]} ||      #{hash[:credit]}||     #{hash[:debit]} ||    #{hash[:account_balance]}"
+    end
   end
 end
 
