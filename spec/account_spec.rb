@@ -12,7 +12,15 @@ describe Account do
   describe '#deposit' do
     it 'allows sum to be deposited into user account' do
       amount = 500
-      expect { subject.deposit(amount) }.to change { subject.account_balance}.by amount
+      expect { subject.deposit(amount) }.to change { subject.account_balance }.by amount
+    end
+  end
+
+  describe '#withdraw' do
+    it 'amount to be withdrawn from user account' do
+      subject.deposit(100)
+      amount = 50
+      expect { subject.withdraw(amount) }. to change { subject.account_balance }.by - amount
     end
   end
 end
