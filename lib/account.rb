@@ -7,4 +7,8 @@ class Account
   def account_balance
     @balance
   end
+
+  def deposit(amount)
+    @balance += amount
+  end
 end
