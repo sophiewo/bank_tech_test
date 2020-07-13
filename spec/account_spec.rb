@@ -24,7 +24,13 @@ describe Account do
     end
 
     it 'raises error if not enough funds are available' do
-      expect { subject.withdraw(500) }.to raise_error "Insufficient funds" 
+      expect { subject.withdraw(500) }.to raise_error 'Insufficient funds'
+    end
+  end
+
+  describe '#date' do
+    it 'returns the date of transaction in the correct format DD/MM/YYYY' do
+      expect(subject.date).to eq("13/07/2020")
     end
   end
 end

@@ -1,3 +1,5 @@
+require 'time'
+
 # Account class
 class Account
   def initialize
@@ -13,10 +15,12 @@ class Account
   end
 
   def withdraw(amount)
+    raise 'Insufficient funds' if amount > @balance
 
-    fail "Insufficient funds" if amount > @balance
-    
     @balance -= amount
+  end 
 
+  def date
+    transaction_date = Time.new.strftime("%d/%m/%Y")
   end
 end
