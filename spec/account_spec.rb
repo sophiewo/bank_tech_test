@@ -30,7 +30,7 @@ describe Account do
 
   describe '#date' do
     it 'returns the date of transaction in the correct format DD/MM/YYYY' do
-      expect(subject.date).to eq("13/07/2020")
+      expect(subject.date).to eq('13/07/2020')
     end
   end
 end
