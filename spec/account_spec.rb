@@ -1,11 +1,16 @@
 require 'account'
 
 describe Account do
-  it 'exists' do
+
+  before do
+    Timecop.freeze(Time.today)
+  end
+
+  it 'instansiates on new' do
     expect(Account).to respond_to(:new)
   end
 
-  it 'account starts with a balance of £0' do
+  it 'starts with a balance of £0' do
     expect(subject.account_balance).to eq(0)
   end
 
@@ -17,10 +22,10 @@ describe Account do
   end
 
   describe '#withdraw' do
-    it 'amount to be withdrawn from user account' do
+    it 'allows amount to be withdrawn from user account' do
       subject.deposit(100)
       amount = 50
-      expect { subject.withdraw(amount) }. to change { subject.account_balance }.by(- amount)
+      expect { subject.withdraw(amount) }.to change { subject.account_balance }.by(- amount)
     end
 
     it 'raises error if not enough funds are available' do
