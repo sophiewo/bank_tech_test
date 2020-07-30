@@ -28,10 +28,10 @@ class Account
     Time.new.strftime('%d/%m/%Y')
   end
 
-  def print
-    puts 'date       || credit || debit || balance'
-    @statement.each do |hash|
-      puts "#{hash[:date]} ||      #{hash[:credit]}||     #{hash[:debit]} ||    #{hash[:account_balance]}"
-    end
-  end
+  # def print
+  #   puts 'date       || credit || debit || balance'
+  #   @statement.each do |hash|
+  #     puts "#{hash[:date]} ||      #{hash[:credit]}||     #{hash[:debit]} ||    #{hash[:account_balance]}"
+  #   end
+  # end
 end
