@@ -46,4 +46,4 @@ my_account.print_statement
 - SimpleCov
 - Class Diagram:
 
-![Class Diagram](https://https://github.com/sophiewo/bank_tech_test/)
+![Class Diagram](https://github.com/sophiewo/bank_tech_test/blob/encapsulate_classes/assets/ClassDiagram.png)
