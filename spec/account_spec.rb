@@ -1,5 +1,3 @@
-require 'account'
-require 'timecop'
 
 describe Account do
 
@@ -36,7 +34,7 @@ describe Account do
 
   describe '#date' do
     it 'returns the date of transaction in the correct format DD/MM/YYYY' do
-      expect(subject.date).to eq(Time.new.strftime('%d/%m/%Y'))
+      expect(subject.date).to eq(Time.now.strftime('%d/%m/%Y'))
     end
   end
 end
