@@ -1,9 +1,10 @@
 require 'account'
+require 'timecop'
 
 describe Account do
 
   before do
-    Timecop.freeze(Time.today)
+    Timecop.freeze(Time.now)
   end
 
   it 'instansiates on new' do
@@ -35,7 +36,7 @@ describe Account do
 
   describe '#date' do
     it 'returns the date of transaction in the correct format DD/MM/YYYY' do
-      expect(subject.date).to eq('13/07/2020')
+      expect(subject.date).to eq(Time.new.strftime('%d/%m/%Y'))
     end
   end
 end
