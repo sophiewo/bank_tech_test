@@ -35,3 +35,11 @@ date       || credit  || debit  || balance
 ```
 
 When user makes a transaction, date, balance are added as hashes to store for statement 
+
+*** Tasks
+
+- formattting for statement
+- extract statement to new class
+- extract deposit/withdraw to new class?
+- DRY code
+- mocks/stubs
