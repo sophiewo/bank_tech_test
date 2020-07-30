@@ -45,4 +45,5 @@ my_account.print_statement
 - Rubocop
 - SimpleCov
 - Class Diagram:
-  [./assets/ClassDiagram.png]
+
+![Class Diagram](https://https://github.com/sophiewo/bank_tech_test/)
