@@ -1,13 +1,11 @@
 # Bank tech test
 
-## Specification
+## Specification:
 
 ### Requirements
-
-* You should be able to interact with your code via a REPL like IRB or the JavaScript console.  (You don't need to implement a command line interface that takes input from STDIN.)
 * Deposits, withdrawal.
 * Account statement (date, amount, balance) printing.
-* Data can be kept in memory (it doesn't need to be stored to a database or anything).
+* Data can be kept in memory (it doesn't need to be stored to a database or anything)
 
 ### Acceptance criteria
 
@@ -24,28 +22,27 @@ date || credit || debit || balance
 10/01/2012 || 1000.00 || || 1000.00
 ```
 
-## To use this program
+## To use this program:
 
 * Clone/fork this repo
 * Run `bundle install` to get dependecies
 * Run `rspec` to ensure programme is working
 * Run `IRB` or REPL of your choice
-* Require file
-
-
-
-## Self-assessment
-
-Once you have completed the challenge and feel happy with your solution, here's a form to help you reflect on the quality of your code: https://docs.google.com/forms/d/1Q-NnqVObbGLDHxlvbUfeAC7yBCf3eCjTmz6GOqC9Aeo/edit
-
-![Tracking pixel](https://githubanalytics.herokuapp.com/course/individual_challenges/bank_tech_test.md)
-
+* Require the file  `require './lib/user.rb' `
+* Commands:
 ```
-Today, you'll practice doing a tech test.
-
-For most tech tests, you'll essentially have unlimited time.  This practice session is about producing the best code you can when there is a minimal time pressure.
-
-You'll get to practice your OO design and TDD skills.
-
-You'll work alone, and you'll also review your own code so you can practice reflecting on and improving your own work.
+my_account = User.new
+my_account.show_balance
+my_account.deposit(amount)
+my_account.withdraw(amount)
+my_account.print_statement
 ```
+## How I built this program:
+
+- Ruby
+- OO design principles
+- TDD 
+- Rubocop
+- SimpleCov
+- Class Diagram:
+  [./assets/ClassDiagram.png]
