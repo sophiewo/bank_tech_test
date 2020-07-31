@@ -39,11 +39,15 @@ my_account.print_statement
 ```
 ## How I built this program:
 
-- Ruby
-- OO design principles
+- Ruby using OO design principles
 - TDD 
-- Rubocop
-- SimpleCov
-- Class Diagram:
+ - Rspec
+ - Rubocop
+ - SimpleCov
+- Diagram (see below)
 
-![Class Diagram](https://github.com/sophiewo/bank_tech_test/blob/encapsulate_classes/assets/ClassDiagram.png)
+## Class Relationship Diagrams
+
+![Initial Class Diagram](https://github.com/sophiewo/bank_tech_test/blob/encapsulate_classes/assets/ClassDiagram_1.png)
+
+![Final Class Diagram](https://github.com/sophiewo/bank_tech_test/blob/encapsulate_classes/assets/ClassDiagram_2.png)
