@@ -14,4 +14,6 @@ class User
   def user_deposit(amount)
     @user_account.deposit(amount)
   end
+
+  
 end

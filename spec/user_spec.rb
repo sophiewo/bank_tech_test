@@ -13,6 +13,17 @@ describe User do
       amount = 500
       expect { subject.user_deposit(amount) }.to change { subject.show_user_balance }.by amount
     end
+  end
 
+  describe '#user_withdraw' do
+    it 'allows amount to be withdrawn from user account' do
+      subject.user_deposit(100)
+      amount = 50
+      expect { subject.user_withdraw(amount) }.to change { subject.show_user_balance }.by(- amount)
+    end
+
+    it 'raises error if not enough funds are available' do
+      expect { subject.user_withdraw(500) }.to raise_error 'Insufficient funds'
+    end
   end
 end
