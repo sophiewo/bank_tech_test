@@ -19,4 +19,7 @@ class User
     @user_account.withdraw(amount)
   end
   
+  def print_user_statement
+    "Statement"
+  end
 end

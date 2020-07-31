@@ -26,4 +26,10 @@ describe User do
       expect { subject.user_withdraw(500) }.to raise_error 'Insufficient funds'
     end
   end
+
+  describe '#print_user_statement' do
+    it 'displays user statement of transations for current session' do
+      expect(subject.print_user_statement).to eq("Statement")
+    end
+  end
 end
