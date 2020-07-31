@@ -1,4 +1,7 @@
 require 'simplecov'
+require 'account'
+require 'statement'
+require 'timecop'
 
 SimpleCov.start
 

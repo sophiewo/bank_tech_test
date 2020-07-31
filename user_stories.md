@@ -43,3 +43,4 @@ When user makes a transaction, date, balance are added as hashes to store for st
 - extract deposit/withdraw to new class?
 - DRY code
 - mocks/stubs
+- mock/stub for date.
