@@ -48,6 +48,6 @@ my_account.print_statement
 
 ## Class Relationship Diagrams
 
-![Initial Class Diagram](https://github.com/sophiewo/bank_tech_test/blob/encapsulate_classes/assets/ClassDiagram_1.png)
+![Initial Class Diagram](https://github.com/sophiewo/bank_tech_test/blob/master/assets/ClassDiagram_1.png)
 
-![Final Class Diagram](https://github.com/sophiewo/bank_tech_test/blob/encapsulate_classes/assets/ClassDiagram_2.png)
+![Final Class Diagram](https://github.com/sophiewo/bank_tech_test/blob/master/assets/ClassDiagram_2.png)
