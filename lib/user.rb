@@ -7,7 +7,7 @@ class User
     @user_account = user_account
   end
 
-  def show_user_balance
+  def user_balance
     @user_account.account_balance
   end
 
