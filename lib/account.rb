@@ -7,7 +7,6 @@ class Account
 
   def initialize
     @balance = 0
-    # @transation = { "transation_date" => date, "account_balance" => @balance }
     @account_statement = Statement.new.account_statement
   end
 
@@ -27,6 +26,10 @@ class Account
     @balance -= amount
 
     @account_statement << { date: date, credit: '        ', debit: amount, account_balance: @balance }
+  end
+
+  def statement
+    Statement.new.statement_formatter
   end
 
   def date

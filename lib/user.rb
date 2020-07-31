@@ -5,6 +5,7 @@ class User
 
   def initialize(user_account = Account.new)
     @user_account = user_account
+    @user_statement = Statement.new
   end
 
   def user_balance
@@ -20,6 +21,6 @@ class User
   end
   
   def print_user_statement
-    "Statement"
+    @user_statement.account_statement
   end
 end

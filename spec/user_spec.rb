@@ -29,7 +29,8 @@ describe User do
 
   describe '#print_user_statement' do
     it 'displays user statement of transations for current session' do
-      expect(subject.print_user_statement).to eq("Statement")
+      subject.user_deposit(100)
+      expect(subject.print_user_statement).to start_with('date       || credit || debit || balance')
     end
   end
 end
