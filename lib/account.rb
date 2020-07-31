@@ -2,6 +2,9 @@
 require './lib/statement.rb'
 
 class Account
+
+  attr_writer :balance, :account_statement
+
   def initialize
     @balance = 0
     # @transation = { "transation_date" => date, "account_balance" => @balance }
