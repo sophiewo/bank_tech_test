@@ -7,6 +7,8 @@ describe Account do
 
   it 'instansiates on new' do
     expect(Account).to respond_to(:new)
+
+    #should be able to inject statement in here to test it initializes with an empty statement
   end
 
   it 'starts with a balance of £0' do
