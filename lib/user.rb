@@ -10,4 +10,8 @@ class User
   def show_user_balance
     @user_account.account_balance
   end
+
+  def user_deposit(amount)
+    @user_account.deposit(amount)
+  end
 end
