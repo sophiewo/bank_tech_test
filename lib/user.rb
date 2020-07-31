@@ -15,5 +15,8 @@ class User
     @user_account.deposit(amount)
   end
 
+  def user_withdraw(amount)
+    @user_account.withdraw(amount)
+  end
   
 end
