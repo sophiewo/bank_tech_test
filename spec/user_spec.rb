@@ -1,7 +1,6 @@
 require 'user'
 
 describe User do
-
   describe '#user_balance' do
     it 'shows the user their starting balance of £0' do
       expect(subject.user_balance).to eq(0)
@@ -30,7 +29,7 @@ describe User do
   describe '#print_user_statement' do
     it 'displays user statement of transations for current session' do
       subject.user_deposit(100)
-      expect { subject.print_user_statement }.to output {'date       || credit || debit || balance' }.to_stdout
+      expect { subject.print_user_statement }.to output { 'date       || credit || debit || balance' }.to_stdout
     end
   end
 end

@@ -1,5 +1,4 @@
 describe Transaction do
-
   before do
     Timecop.freeze(Time.now)
   end

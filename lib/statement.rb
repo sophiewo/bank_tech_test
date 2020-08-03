@@ -1,6 +1,5 @@
-#statement class
+# Statement class
 class Statement
-
   attr_reader :account_statement
 
   def statement_formatter(account_statement)
@@ -10,4 +9,3 @@ class Statement
     end
   end
 end
-

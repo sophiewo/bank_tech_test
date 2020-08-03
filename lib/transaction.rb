@@ -1,5 +1,5 @@
+# Transaction Class
 class Transaction
-
   attr_reader :balance, :account_statement
 
   def initialize

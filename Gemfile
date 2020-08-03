@@ -2,7 +2,7 @@
 
 source 'https://rubygems.org'
 
-git_source(:github) { |repo_name| "https://github.com/sophiewo/bank_tech_test" }
+git_source(:github) { |_repo_name| 'https://github.com/sophiewo/bank_tech_test' }
 
 group :test do
   gem 'rspec'
