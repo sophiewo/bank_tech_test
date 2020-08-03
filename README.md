@@ -32,11 +32,16 @@ date || credit || debit || balance
 * Commands:
 ```
 my_account = User.new
-my_account.show_balance
-my_account.deposit(amount)
-my_account.withdraw(amount)
-my_account.print_statement
+my_account.user_balance
+my_account.user_deposit(amount)
+my_account.user_withdraw(amount)
+my_account.print_user_statement
 ```
+
+## Example of running app
+
+![IRB Example of running APP](https://github.com/sophiewo/bank_tech_test/blob/master/assets/IRB_RunningApp.png)
+
 ## How I built this program:
 
 - Ruby using OO design principles
