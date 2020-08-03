@@ -1,4 +1,3 @@
-
 describe Transaction do
 
   before do

@@ -1,9 +1,9 @@
-require './lib/account.rb'
+require './lib/transaction.rb'
 require './lib/statement.rb'
 
 class User
 
-  def initialize(user_account = Account.new)
+  def initialize(user_account = Transaction.new)
     @user_account = user_account
   end
 
