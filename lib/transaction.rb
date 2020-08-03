@@ -1,7 +1,7 @@
 # Account class
 # require './lib/statement.rb'
 
-class Account
+class Transaction
 
   attr_reader :balance, :account_statement
 
