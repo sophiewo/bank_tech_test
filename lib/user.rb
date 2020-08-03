@@ -1,11 +1,10 @@
-# require './lib/statement.rb'
 require './lib/account.rb'
+require './lib/statement.rb'
 
 class User
 
   def initialize(user_account = Account.new)
     @user_account = user_account
-    # @user_statement = Statement.new
   end
 
   def user_balance
@@ -21,6 +20,7 @@ class User
   end
   
   def print_user_statement
-    @user_account.statement
+    statement = @user_account.account_statement
+    Statement.new.statement_formatter(statement)
   end
 end

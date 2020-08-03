@@ -1,13 +1,13 @@
 # Account class
-require './lib/statement.rb'
+# require './lib/statement.rb'
 
 class Account
 
-  attr_writer :balance, :account_statement
+  attr_reader :balance, :account_statement
 
   def initialize
     @balance = 0
-    @account_statement = Statement.new.account_statement
+    @account_statement = []
   end
 
   def account_balance
@@ -17,7 +17,7 @@ class Account
   def deposit(amount)
     @balance += amount
 
-    @account_statement << { date: date, credit: amount, debit: '       ', account_balance: @balance }
+    @account_statement << { date: date, credit: amount, debit: '', account_balance: @balance }
   end
 
   def withdraw(amount)
@@ -25,11 +25,7 @@ class Account
 
     @balance -= amount
 
-    @account_statement << { date: date, credit: '        ', debit: amount, account_balance: @balance }
-  end
-
-  def statement
-    Statement.new.statement_formatter
+    @account_statement << { date: date, credit: '', debit: amount, account_balance: @balance }
   end
 
   def date

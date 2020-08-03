@@ -30,7 +30,7 @@ describe User do
   describe '#print_user_statement' do
     it 'displays user statement of transations for current session' do
       subject.user_deposit(100)
-      expect(subject.print_user_statement).to start_with('date       || credit || debit || balance')
+      expect { subject.print_user_statement }.to output {'date       || credit || debit || balance' }.to_stdout
     end
   end
 end
