@@ -56,3 +56,30 @@ my_account.print_user_statement
 ![Initial Class Diagram](https://github.com/sophiewo/bank_tech_test/blob/master/assets/ClassDiagram_1.png)
 
 ![Final Class Diagram](https://github.com/sophiewo/bank_tech_test/blob/master/assets/ClassDiagram_2.png)
+
+
+# Here is my feedback:
+## Display
+Your display of the statement should be an exact match of the acceptance criteria.
+Can you change your code so this is met please?
+
+Currently:
+
+date || credit || debit || balance
+06/08/2020 ||10|| || 10
+06/08/2020 || || 5 || 5
+
+date || credit || debit || balance
+14/01/2012 || || 500.00 || 2500.00
+13/01/2012 || 2000.00 || || 3000.00
+10/01/2012 || 1000.00 || || 1000.00
+
+## SRP
+statement_formatter in your Statement class could be extracted a little for better SRP
+
+## Separation of Concerns/OO design
+Your user class is basically just delegating to the Transaction class continually. For me this looks like “feature envy” - how could you fix this?
+       https://refactoring.guru/smells/feature-envy
+
+## Tests/Mocking
+You should be isolating your tests using doubles
