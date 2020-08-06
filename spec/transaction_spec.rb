@@ -1,3 +1,10 @@
+RSpec::Matchers.define :have_value_decimals do |expected_key, expected_value|
+  match do |actual|
+    actual[expected_key] == expected_value
+  end
+end
+
+
 describe Transaction do
   before do
     Timecop.freeze(Time.now)
@@ -16,6 +23,11 @@ describe Transaction do
       amount = 500
       expect { subject.deposit(amount) }.to change { subject.account_balance }.by amount
     end
+
+    it 'formats amount to 500.00' do
+      @account_statement = []
+      expect(subject.deposit(500)).to all( have_value_decimals(:credit, 500.00) )
+    end
   end
 
   describe '#withdraw' do
@@ -33,12 +45,6 @@ describe Transaction do
   describe '#date' do
     it 'returns the date of transaction in the correct format DD/MM/YYYY' do
       expect(subject.date).to eq(Time.now.strftime('%d/%m/%Y'))
-    end
-  end
-
-  describe '#to_2_decimal_places' do
-    it "formats integer to 500.00" do
-      expect(subject.to_2_decimal_places(500)).to eq(500.00)
     end
   end
 end

@@ -8,13 +8,14 @@ class Transaction
   end
 
   def account_balance
-    @balance
+    @balance.to_f.round(2)
   end
 
   def deposit(amount)
-    @balance += amount
+    number = amount.to_f.round(2)
+    @balance += number
 
-    @account_statement << { date: date, credit: amount, debit: '', account_balance: @balance }
+    @account_statement << { date: date, credit: number, debit: '', account_balance: @balance }
   end
 
   def withdraw(amount)
@@ -28,10 +29,4 @@ class Transaction
   def date
     Time.new.strftime('%d/%m/%Y')
   end
-
-  def to_2_decimal_places(number)
-    number.to_f.round(2)
-  end
-
-
 end
