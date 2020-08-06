@@ -9,4 +9,10 @@ describe Statement do
       expect { subject.statement_formatter(account_statement) }.to output { 'date       || credit || debit || balance' }.to_stdout
     end
   end
+
+  describe '#to_2_decimal_places' do
+    it "formats integer to 500.00" do
+      expect(subject.to_2_decimal_places(500)).to eq(500.00)
+    end
+  end
 end
