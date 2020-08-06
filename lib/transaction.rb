@@ -8,7 +8,7 @@ class Transaction
   end
 
   def account_balance
-    @balance.to_f.round(2)
+    @balance
   end
 
   def deposit(amount)
