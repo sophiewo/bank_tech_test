@@ -5,7 +5,7 @@ class Statement
   def statement_formatter(account_statement)
     puts 'date || credit || debit || balance'
     account_statement.each do |hash|
-      puts "#{hash[:date]} || #{hash[:credit]}.00|| #{hash[:debit]}.00 ||#{hash[:account_balance]}.00"
+      puts "#{hash[:date]} || #{hash[:credit]}|| #{hash[:debit]} ||#{hash[:account_balance]}"
     end
   end
 end
