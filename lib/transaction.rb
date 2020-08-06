@@ -28,4 +28,10 @@ class Transaction
   def date
     Time.new.strftime('%d/%m/%Y')
   end
+
+  def to_2_decimal_places(number)
+    number.to_f.round(2)
+  end
+
+
 end
