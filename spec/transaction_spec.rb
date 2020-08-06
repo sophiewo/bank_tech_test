@@ -1,10 +1,3 @@
-RSpec::Matchers.define :have_value_decimals do |expected_key, expected_value|
-  match do |actual|
-    actual[expected_key] == expected_value
-  end
-end
-
-
 describe Transaction do
   before do
     Timecop.freeze(Time.now)
