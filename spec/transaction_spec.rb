@@ -18,7 +18,6 @@ describe Transaction do
     end
 
     it 'formats amount to 500.00' do
-      @account_statement = []
       expect(subject.deposit(500)).to all( have_value_decimals(:credit, 500.00) )
     end
   end
